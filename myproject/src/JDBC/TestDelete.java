@@ -1,0 +1,21 @@
+package JDBC;
+
+import java.util.Scanner;
+
+public class TestDelete {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter eno that you want to delete?");
+		
+		int eno = scan.nextInt();
+		
+		EmployeeDAO eDAO = new EmployeeDAO();
+		eDAO.deleteEmployee(eno);
+		
+		scan.close();
+		
+		
+	}
+}
